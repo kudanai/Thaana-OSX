@@ -13,7 +13,7 @@ cd $TEMP_DIR
 
 # begin 
 echo "Downloading files"
-curl -s ${PAYLOAD_URL} -o "payload.zip" && unzip -qu "payload.zip" -x '__MACOSX/*'
+curl ${PAYLOAD_URL} --progress-bar -o "payload.zip" && unzip -qu "payload.zip" -x '__MACOSX/*'
 
 # copy the fonts
 echo "Copying fonts..."
@@ -32,7 +32,7 @@ while true; do
 			echo "Downloading and installing radheef..."
 			curl ${RADHEEF_URL} --progress-bar -o "radheef.tar.gz" && tar xzf radheef.tar.gz --directory ~/Library/Dictionaries/
 			break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
