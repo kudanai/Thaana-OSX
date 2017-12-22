@@ -5,6 +5,7 @@
 
 TEMP_DIR="titemp_3142"
 PAYLOAD_URL="https://raw.githubusercontent.com/kudanai/Thaana-OSX/master/2017/payload.zip"
+RADHEEF_URL="https://raw.githubusercontent.com/kudanai/Thaana-OSX/master/2017/radheef.tar.gz"
 
 # create temporary working directory
 mkdir -p $TEMP_DIR
@@ -23,6 +24,18 @@ echo "Installing keyboard..."
 /bin/cp -rf dv_phonetic.bundle ~/Library/Keyboard\ Layouts/
 
 
+# prompt for dictionary
+while true; do
+    read -p "Do you want to download the Radheef? [y]es [n]o: " yn
+    case $yn in
+        [Yy]* ) 
+			echo "Downloading and installing radheef..."
+			curl ${RADHEEF_URL} -o "radheef.tar.gz" && tar xvzf radheef.tar.gz --directory ~/Library/Dictionaries/
+			break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 #open the preferences
 osascript osa.scpt > /dev/null
