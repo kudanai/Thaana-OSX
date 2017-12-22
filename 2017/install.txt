@@ -4,7 +4,7 @@
 # 2017 @kudanai
 
 TEMP_DIR="titemp_3142"
-PAYLOAD_URL="file:///Users/kudanai/Desktop/thaanasetup/payload.zip"
+PAYLOAD_URL="https://raw.githubusercontent.com/kudanai/Thaana-OSX/master/2017/payload.zip"
 
 # create temporary working directory
 mkdir -p $TEMP_DIR
