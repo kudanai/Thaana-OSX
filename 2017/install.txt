@@ -1,0 +1,34 @@
+#!/bin/bash
+# script installs a bunch of fonts and keyboard files
+# for osx. Downloads files from github
+# 2017 @kudanai
+
+TEMP_DIR="titemp_3142"
+PAYLOAD_URL="file:///Users/kudanai/Desktop/thaanasetup/payload.zip"
+
+# create temporary working directory
+mkdir -p $TEMP_DIR
+cd $TEMP_DIR
+
+# begin 
+echo "Downloading files"
+curl -s ${PAYLOAD_URL} -o "payload.zip" && unzip -qu "payload.zip" -x '__MACOSX/*'
+
+# copy the fonts
+echo "Copying fonts..."
+unzip -qu fonts.zip -d ~/Library/Fonts/ -x '__MACOSX/*'
+
+# copy the keyboard
+echo "Installing keyboard..."
+/bin/cp -rf dv_phonetic.bundle ~/Library/Keyboard\ Layouts/
+
+
+
+#open the preferences
+osascript osa.scpt > /dev/null
+
+# all done delete the temp
+cd ..
+rm -rf $TEMP_DIR
+
+echo "Done!"
