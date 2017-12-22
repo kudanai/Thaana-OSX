@@ -30,7 +30,7 @@ while true; do
     case $yn in
         [Yy]* ) 
 			echo "Downloading and installing radheef..."
-			curl ${RADHEEF_URL} -o "radheef.tar.gz" && tar xvzf radheef.tar.gz --directory ~/Library/Dictionaries/
+			curl ${RADHEEF_URL} --progress-bar -o "radheef.tar.gz" && tar xzf radheef.tar.gz --directory ~/Library/Dictionaries/
 			break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
