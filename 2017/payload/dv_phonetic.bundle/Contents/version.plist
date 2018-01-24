@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>BuildVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>ProjectName</key>
-	<string>Dhivehi - Phonetic</string>
+	<string>dv_phonetic</string>
 	<key>SourceVersion</key>
 	<string>1000</string>
 </dict>

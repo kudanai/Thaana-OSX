@@ -5,9 +5,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.sil.ukelele.keyboardlayout.thaana- phonetic</string>
 	<key>CFBundleName</key>
-	<string>Dhivehi - Phonetic</string>
+	<string>dv_phonetic</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>KLInfo_Dhivehi - Phonetic</key>
 	<dict>
 		<key>TISInputSourceID</key>

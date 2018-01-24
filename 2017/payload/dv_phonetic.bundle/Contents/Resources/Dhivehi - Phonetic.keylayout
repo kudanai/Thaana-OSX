@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.2.7.195 on 2017-12-22 at 11:00 (GMT+5)-->
+<!--Last edited by Ukelele version 3.2.7.195 on 2018-01-24 at 14:11 (GMT+5)-->
 <keyboard group="126" id="-31102" name="Dhivehi - Phonetic" maxout="1">
 	<layouts>
 		<layout first="0" last="0" mapSet="a8" modifiers="30"/>
