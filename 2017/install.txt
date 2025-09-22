@@ -38,7 +38,7 @@ while true; do
 done
 
 #open the preferences
-osascript osa.scpt > /dev/null
+open "x-apple.systempreferences:com.apple.preference.keyboard"
 
 # all done delete the temp
 cd ..
